@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Compiler</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="/stylesheets/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="topBar">
+        <select id="lang" onchange="handleLangChange()">
+            <option value="1">C</option>
+            <option value="2">C++</option>
+            <option value="3">Python</option>
+            <option value="4">Java</option>
+        </select>
+        <button id="run" onclick="handleSubmit()">Compile/Run</button>
+    </div>    
+    <div id="editor"></div>  
+    <div id="bottom">
+        <div id="bottom-left">
+            <div id="output">Output:</div>
+            <pre id="output-text"></pre>
+        </div>
+        <div id="bottom-right">
+            <div id="input">Input:</div>
+            <textarea id="input-text"></textarea>
+        </div>
+
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/dracula");
+        editor.session.setMode("ace/mode/c_cpp");
+    </script>
+    <script src="/javascript/index.js"></script>  
+</body>
+</html>

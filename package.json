@@ -1,0 +1,21 @@
+{
+  "name": "compile-code-docker",
+  "version": "1.0.0",
+  "description": "A module to compile codes from different languages using NodeJS. Useful for making online compilers",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aryan Likhite",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compile-code": "^1.0.1",
+    "cuid": "^2.1.6",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
