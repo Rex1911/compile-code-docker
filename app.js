@@ -3,10 +3,12 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const compiler = require('compile-code')
+const cors = require('cors');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
